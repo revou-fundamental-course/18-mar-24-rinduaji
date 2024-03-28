@@ -1,0 +1,82 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+}
+
+.logo-icon {
+    margin: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url('../assets/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-container {
+    margin: 0px;
+}
+
+.nav-container>button {
+    color: black;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+    height: 25px;
+}
+
+hr {
+    margin: 0px;
+    border: 1px solid rgb(229, 229, 229);
+}
+
+h3 {
+    color: rgb(94, 91, 91);
+}
+
+.section-container {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.section-content-container {
+    display: flex;
+}
+
+.section-container>header {
+    text-align: center;
+}
+
+.section-content-container>div:nth-child(1) {
+    height: 200px;
+    width: 100%;
+    margin-right: 16px;
+    background-color: green;
+}
+
+.section-content-container>div:nth-child(2) {
+    height: 200px;
+    width: 100%;
+    margin-left: 16px;
+    background-color: aliceblue;
+}
+
+.name-input {
+    height: 24px;
+    width: 50%;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.form-button {
+    height: 24px;
+    width: 64px;
+    color: white;
+    background-color: black;
+    border: 0px;
+    border-radius: 3px;
+}
