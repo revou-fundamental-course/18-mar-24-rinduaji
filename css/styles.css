@@ -71,6 +71,7 @@ label {
 
 .section-content-container {
     display: flex;
+    margin: 100px 0px;
 }
 
 .section-container>header {
@@ -85,7 +86,6 @@ label {
 }
 
 .section-content-container>div:nth-child(2) {
-    height: auto;
     width: 100%;
     margin-left: 20px;
     background-color: rgb(230, 232, 237);
@@ -121,7 +121,18 @@ label {
     border-radius: 3px;
 }
 
-/*home - banner */
+#error-name, #error-email, #error-select-option {
+    color: rgb(238, 38, 38);
+}
+
+/* home - banner */
+.banner-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .banner-name-container>hr {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -168,6 +179,7 @@ label {
     align-items: flex-start;
     align-content: flex-start;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .detail-banner {
@@ -189,7 +201,8 @@ label {
 
 /* section package */
 .section-package-container {
-    margin-bottom: 50px;
+    margin-top: 200px;
+    margin-bottom: 100px;
 }
 
 .section-package-container>header {
@@ -281,3 +294,152 @@ footer>p {
     padding: 0px;
     margin: 5px;
 }
+
+/* image slider */
+.image-slider {
+    width: 100%;
+    max-width: 600px; /* Sesuaikan ukuran slider dengan kebutuhan */
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.image-slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.image-slider img.active {
+    display: block;
+}
+
+/* Untuk navigasi slider */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* home - form */
+.form-container {
+    width: 100%;
+}
+
+.input-name, .input-email, .select-option, .form-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(103, 101, 101);
+    border-radius: 5px;
+}
+
+/* CSS untuk tampilan desktop */
+@media only screen and (min-width: 768px) {
+    .section-container {
+        margin: 50px 10%;
+    }
+
+    .image-slider {
+        max-width: 100%;
+    }
+}
+
+/* CSS untuk tampilan mobile */
+@media only screen and (max-width: 767px) {
+    .section-container {
+        margin: 50px 5%;
+    }
+
+    .section-content-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .banner-slider {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .banner-name-container {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 150px;
+    }
+
+    .banner-info {
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .photo-icon {
+        /* border: 1px solid black; */
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 0px;
+        background-image: url('../assets/FOTO-AJI.JPG');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .daftar-banner {
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .list-banner {
+        flex-direction: column;
+    }
+
+    .detail-banner {
+        margin-bottom: 20px;
+    }
+
+    .image-slider {
+        max-width: 100%;
+    }
+
+    .prev, .next {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .form-container {
+        margin-top: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

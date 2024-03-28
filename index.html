@@ -27,6 +27,15 @@
         <section class="section-content-container">
             <div class="banner-slider">
                 <div class="banner-name-container">
+                    <div class="image-slider">
+                        <img src="assets/image1.jpg" alt="Image 1">
+                        <img src="assets/image2.jpg" alt="Image 2">
+                        <img src="assets/image3.jpg" alt="Image 3">
+                        <div class="slider-buttons">
+                            <button class="prev">&#10094;</button>
+                            <button class="next">&#10095;</button>
+                        </div>
+                    </div>
                     <p>
                         <q>Liburan jadi menyenangkan bersama Travel Agentku.</q>
                     </p>
@@ -38,8 +47,6 @@
                             <p>Karyawan Swasta, 29</p>
                         </section>
                     </section>
-                </div>
-                <div>
                     <p>Use this space to provide users with more information about you offer. Consider it a follow-up to your headline and explain the benefits of your service or product</p>
                     <section class="list-banner">
                         <section class="detail-banner">
@@ -61,15 +68,23 @@
                 <h3>Contact Us</h3>
                 <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima</p>
                 <br><br>
-                <label>Your Name:</label><br>
-                <input type="text" class="input-name" placeholder="First and last name"><br>
-                <label>Email Address:</label><br>
-                <input type="email" class="input-email"  placeholder="example@email.com"><br>
-                <label>What are you interested in?:</label><br>
-                <select class="select-option">
-                    <option>Select option</option>
-                </select><br>
-                <button class="form-button" type="button">SEND</button>
+                <form>
+                    <label>Your Name:</label><br>
+                    <input type="text" class="input-name" id="input-name" placeholder="First and last name"><br>
+                    <p id="error-name"></p><br>
+                    <label>Email Address:</label><br>
+                    <input type="email" class="input-email" id="input-email" placeholder="example@email.com"><br>
+                    <p id="error-email"></p><br>
+                    <label>What are you interested in?:</label><br>
+                    <select class="select-option" id="select-option">
+                        <option value="">Select option</option>
+                        <option value="Backend Developer">Backend Developer</option>
+                        <option value="FrontEnd Developer">FrontEnd Developer</option>
+                        <option value="FullStack Developer">FullStack Developer</option>
+                    </select><br>
+                    <p id="error-select-option"></p><br>
+                    <button class="form-button"id="submit" type="button">SEND</button>
+                </form>
             </div>
         </section>
         <section class="section-package-container">
@@ -134,5 +149,6 @@
             <p>&copy;2019&nbsp;&nbsp;&nbsp;Moqups</p>
         </footer>
     </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
