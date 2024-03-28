@@ -122,3 +122,27 @@ prevButton.addEventListener("click", function () {
     currentSlide--;
     showSlide(currentSlide);
 });
+
+// image slider autoplay
+let slideInterval;
+
+// Function to start autoplay
+function startSlideShow() {
+    slideInterval = setInterval(function () {
+        currentSlide++;
+        showSlide(currentSlide);
+    }, 3000); // Ganti angka 3000 dengan interval waktu dalam milidetik (ms) yang diinginkan
+}
+
+// Function to stop autoplay
+function stopSlideShow() {
+    clearInterval(slideInterval);
+}
+
+// Start autoplay on page load
+startSlideShow();
+
+// Pause autoplay when mouse hovers over the slider
+const sliderContainer = document.querySelector(".image-slider");
+sliderContainer.addEventListener("mouseover", stopSlideShow);
+sliderContainer.addEventListener("mouseleave", startSlideShow);
